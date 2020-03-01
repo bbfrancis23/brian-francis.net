@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../../AquA/angular-material-theme/ng-mat-theme.service';
+
+interface Person {
+  readonly firstName: string;
+  readonly lastName: string;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'brian-francis-net';
+
+
+  constructor( public themeService: ThemeService ) {}
+
+
 }
