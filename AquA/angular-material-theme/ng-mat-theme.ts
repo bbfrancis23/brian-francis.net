@@ -2,7 +2,7 @@ interface MaterialColor {
   readonly hex: string;
 }
 
-export interface MaterialColorPalette {
+interface MaterialColorPalette {
   readonly 50: MaterialColor;
   readonly 100: MaterialColor;
   readonly 200: MaterialColor;
