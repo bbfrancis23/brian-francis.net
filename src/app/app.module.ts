@@ -11,10 +11,12 @@ import {MatButtonModule} from '@angular/material/button';
 
 import {ThemeModule} from '../../AquA/angular-material-theme/ng-mat-theme.module';
 
+import { SettingsModalComponent} from './settings/modal/settings-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SettingsModalComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,7 @@ import {ThemeModule} from '../../AquA/angular-material-theme/ng-mat-theme.module
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    ThemeModule
+    ThemeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

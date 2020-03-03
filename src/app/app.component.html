@@ -1,13 +1,10 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a class="app-title" [routerLink]="'/'">Brian-Francis.net</a>
+    <span class="app-title" [routerLink]="'/'">{{title.label}}</span>
     <span class="greedy-spacer"></span>
-     <button mat-icon-button *ngFor="let item of appConfig?.appNav?.items" [title]="item.label">
+     <button mat-icon-button *ngFor="let item of appNav?.items" [title]="item.label">
       <mat-icon>{{item.icon}}</mat-icon>
     </button>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <span>submenu</span>
   </mat-toolbar-row>
 </mat-toolbar>
 

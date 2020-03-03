@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../AquA/angular-material-theme/ng-mat-theme.service';
-import {AppConfig} from './app.config';
+import {Navigation, NavItem} from '../../AquA/nav/nav';
 
 interface Person {
   readonly firstName: string;
@@ -14,6 +14,10 @@ interface Person {
 })
 export class AppComponent {
 
-  readonly appConfig = new AppConfig();
+  readonly title: NavItem = { label: 'Brian-Francis.net'};
+  readonly appNav: Navigation = {
+    items: [
+      { label: 'Application Navigation', icon: 'menu', },
+      { label: 'Settings', icon: 'settings'} ]};
   constructor( public themeService: ThemeService ) {}
 }
