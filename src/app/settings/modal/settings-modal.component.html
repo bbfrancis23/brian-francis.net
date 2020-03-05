@@ -1,1 +1,10 @@
-modal works
+<h1 mat-dialog-title>SETTINGS</h1>
+<div mat-dialog-content>
+  <mat-grid-list cols="2">
+    <mat-grid-tile *ngFor="let theme of themes">
+      <div class="choose-theme-tile" [ngClass]="{'choose-theme-tile-active': (themeService.getTheme() | async) === theme.name}" (click)="themeService.setTheme(theme.name)">
+        <div class="swatch" [style.background]="'linear-gradient(-45deg, '+theme.getColor('primary')+' 35%,  '+theme.getColor('accent')+' 100%)'"></div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,8 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span class="app-title" [routerLink]="'/'">{{title.label}}</span>
+    <span *ngFor="let navItem of appNav?.items">
+      <a *ngIf="navItem?.link" [class]="navItem.class" [routerLink]="navItem.link" >{{navItem.label}}</a>
+      <span *ngIf="!navItem?.link">
+        <button  mat-icon-button  [title]="navItem.label" (click)="navItem?.click ? navItem.click() :  ''">
+          <mat-icon>{{navItem.icon}}</mat-icon>
+        </button>
+      </span>
+    </span>
     <span class="greedy-spacer"></span>
-     <button mat-icon-button *ngFor="let item of appNav?.items" [title]="item.label">
+     <button mat-icon-button *ngFor="let item of rightNav?.items" [title]="item.label" (click)="item?.click ? item.click() :  ''">
       <mat-icon>{{item.icon}}</mat-icon>
     </button>
   </mat-toolbar-row>

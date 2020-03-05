@@ -5,6 +5,8 @@ export interface NavItem {
   title?: string;
   tooltip?: string;
   items?: NavItem;
+  click?: () => void;
+  class?: string;
 }
 
 export interface Navigation {
